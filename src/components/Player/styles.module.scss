@@ -110,7 +110,7 @@
     transition: filter 0.2s;
 
     &:disabled {
-      cursor: default;
+      cursor: not-allowed;
     }
 
     &:hover:not(:disabled) {
