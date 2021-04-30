@@ -8,6 +8,7 @@ import Link from "next/link";
 
 import styles from "./episode.module.scss";
 import { usePlayer } from "../../contexts/PlayerContext";
+import Head from "next/head";
 
 type Episode = {
   id: string;
@@ -30,6 +31,9 @@ export default function Episode({ episode }: EpisodesProps) {
   const { play } = usePlayer();
   return (
     <div className={styles.episode}>
+      <Head>
+        <title>{episode.title}</title>
+      </Head>
       <div className={styles.thumbnailContainer}>
         <Link href="/">
           <button type="button">
